@@ -7,7 +7,7 @@ people.delete("Logan")
 //clear whole set
 people.clear
 
-//se is always has uniq data
+//se is always has uniq data, and it is always array
 
 
  const people = new Set();
