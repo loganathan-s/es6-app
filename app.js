@@ -6,6 +6,7 @@ import jsonp from 'jsonp';
 import {apiKey as renamedKey, url, sayHi, names, sex } from './src/config.js';
 // Importing default export and named exports in single line
 import User, { createUrl, gravatar } from './src/user.js';
+import { Dog, snickers } from './src/es6class.js';
 
 
 const ages = [1,1,4,52,12,4];
@@ -20,3 +21,4 @@ const logan = new User("logan", "loganathan.ms@gmail.com", "railsshopping.com");
 console.log(logan);
 const profile = createUrl(logan.name);
 const image = gravatar(logan.email);
+
