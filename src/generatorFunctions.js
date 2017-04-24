@@ -42,7 +42,7 @@ function* loop(arr){
   const inventorGen = loop(inventors); // this code wont execute anything
   inventorGen.next // run the function & returns first yield
 
- function ajax(url) {					//success	//call generator, data will be assigned to const of the calle, for firt call data assigned to beers, second time to wes likewise		
+ function ajax(url) {					//success	//call generator, data will be assigned to const of the calle, for firt call data assigned to beers, second time to wes likewise 		
     fetch(url).then(data => data.json()).then(data => dataGen.next(data))
   }
 
@@ -62,3 +62,21 @@ function* steps() {
 
   const dataGen = steps();
   dataGen.next(); // kick it off
+
+
+
+  //Looping Generator instead of calling one by one
+
+  function* lyrics() {
+    yield `But don't tell my heart`;
+    yield `My achy breaky heart`;
+    yield `I just don't think he'd understand`;
+    yield `And if you tell my heart`;
+    yield `My achy breaky heart`;
+    yield `He might blow up and kill this man`;
+  }
+  const achy = lyrics();
+
+   for (const line of achy) {
+    console.log(line);
+  }
