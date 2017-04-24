@@ -29,6 +29,12 @@ class Dog extends Animal {
 		super(name);
 		this.breed = breed;
 	}
+
+	bark(){
+		consol.log(`bark bark`);
+	}
+
+	ea
 }
 
 const rhino = new Dog('Snickers', 'King Charles');
